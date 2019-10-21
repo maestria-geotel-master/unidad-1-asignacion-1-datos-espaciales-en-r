@@ -184,4 +184,15 @@ libremente.
 ... %>% dplyr::filter(PROV %in% c('...', '...', '...')) %>% dplyr::select(...) %>% plot
 ```
 
-### Carga la capa de municipios
+### Municipios
+
+  - Carga la capa de municipios y asígnala al objeto `mun`.
+  - Haz un `plot` en forma de panel donde se muestren todas las columnas
+    de dicho objeto, usando la tubería de `tidyverse`.
+
+<!-- end list -->
+
+``` r
+... <- st_read(dsn = '...', layer = '...')
+... %>% plot
+```
