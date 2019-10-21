@@ -5,6 +5,11 @@ Por lo pronto, ayudaré con `...`. Donde quiera que los veas, deberás
 sustituirlos por lo que indique el correspondiente mandato. “No te
 aco’tumbre”.
 
+Dentro de las opciones de `knitr`, en el encabezado de este archivo, es
+probable que encuentres el argumento `eval = F`. Antes de tejer debes
+cambiarlo a `eval = T`, para que evalúe los bloques de código según tus
+cambios.
+
 ## Mis primeros mapas en R con *simple features*
 
 ### Provincia asignada
@@ -71,7 +76,7 @@ library(...)
 
 ``` r
 st_layers(...)
-prov <- st_read(dsn = '...', layer = '...')
+... <- st_read(dsn = '...', layer = '...')
 plot(...)
 plot(...['...'])
 ```
@@ -153,3 +158,30 @@ as.data.frame(prov[,c('...','...')])
 ... %>% st_drop_geometry() %>% dplyr::select(..., ...) %>% arrange(...)
 ... %>% st_drop_geometry() %>% dplyr::select(..., ...) %>% arrange(desc(...))
 ```
+
+### Filtra tu provincia con `tidyverse`
+
+  - Usa la tubería de `tidyverse` para filtrar tu provincia mediante la
+    función `dplyr::filter`.
+  - Dentro de la misma tubería, genera un panel con la función plot
+    dentro de la tubería mostrando tu provincia, usando sólo la columna
+    `areaenm2`.
+
+<!-- end list -->
+
+``` r
+... %>% dplyr::filter(PROV %in% '...')
+... %>% dplyr::filter(PROV %in% '...') %>% dplyr::select(...) %>% plot
+```
+
+### Filtra tres provincias
+
+Haz un `plot` de tres provincias usando sólo la columna `areaenm2`, una
+de ellas que sea la tuya e incluye la de dos compañeras más que elijas
+libremente.
+
+``` r
+... %>% dplyr::filter(PROV %in% c('...', '...', '...')) %>% dplyr::select(...) %>% plot
+```
+
+### Carga la capa de municipios
