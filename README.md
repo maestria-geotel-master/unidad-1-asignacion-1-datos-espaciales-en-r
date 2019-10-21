@@ -1,5 +1,5 @@
 
-# Datos espaciales en R
+# Unidad 1, asignación 1: datos espaciales en R
 
 Por lo pronto, ayudaré con `...`. Donde quiera que los veas, deberás
 sustituirlos por lo que indique el correspondiente mandato. “No te
@@ -153,5 +153,3 @@ as.data.frame(prov[,c('...','...')])
 ... %>% st_drop_geometry() %>% dplyr::select(..., ...) %>% arrange(...)
 ... %>% st_drop_geometry() %>% dplyr::select(..., ...) %>% arrange(desc(...))
 ```
-
-### Mapa municipal
